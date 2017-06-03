@@ -42,7 +42,6 @@ public class CategoryController {
             model.addAttribute("title", "Add Category");
             return "category/add";
         }
-
         categoryDao.save(category);
         return "redirect:";
     }
