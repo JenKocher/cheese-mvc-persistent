@@ -9,7 +9,7 @@ import javax.validation.constraints.Size;
 import java.util.List;
 
 /**
- * Created by Jen on 6/2/2017.
+ * Created by Jen on 6/6/2017.
  */
 @Entity
 public class Menu {
@@ -25,21 +25,15 @@ public class Menu {
     @ManyToMany
     private List<Cheese> cheeses;
 
-    public Menu (){}
+    public Menu(){}
 
-    public Menu (String aName){
-        this.name = aName;
+    public Menu(String aName){
+        this.name=aName;
     }
 
-    public int getId(){
-        return id;
+    public void addItem(Cheese item){
+        cheeses.add(item);
     }
-
-    /* Assume this will be a generated value
-    public void setId(int anId){
-        this.id=anId;
-    }
-    */
 
     public String getName(){
         return name;
@@ -49,11 +43,15 @@ public class Menu {
         this.name = aName;
     }
 
-    public List<Cheese> getCheeses(){
-        return cheeses;
+    public int getId(){
+        return id;
     }
 
-    public void addItem(Cheese item){
-        cheeses.add(item);
+    public void setId(int anId){
+        this.id = anId;
+    }
+
+    public List<Cheese> getCheeses(){
+        return cheeses;
     }
 }
