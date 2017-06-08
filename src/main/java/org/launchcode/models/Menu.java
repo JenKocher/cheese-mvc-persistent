@@ -27,31 +27,21 @@ public class Menu {
 
     public Menu(){}
 
-    public Menu(String aName){
-        this.name=aName;
-    }
-
     public void addItem(Cheese item){
         cheeses.add(item);
-    }
-
-    public String getName(){
-        return name;
-    }
-
-    public void setName(String aName){
-        this.name = aName;
     }
 
     public int getId(){
         return id;
     }
 
-    public void setId(int anId){
-        this.id = anId;
+    public String getName(){
+        return name;
     }
 
-    public List<Cheese> getCheeses(){
-        return cheeses;
+    public void setName(String Name){
+        this.name = Name;
     }
+
+    public List<Cheese> getCheeses(){return cheeses;}
 }

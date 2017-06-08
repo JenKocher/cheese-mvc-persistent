@@ -23,10 +23,6 @@ public class Cheese {
     @Size(min=1, message = "Description must not be empty")
     private String description;
 
-    /* replace enum with category that user can add
-    * private CheeseType type;
-    */
-
     @ManyToOne
     private Category category;
 
@@ -60,7 +56,6 @@ public class Cheese {
         this.description = description;
     }
 
-    //Replaced getter and setter for type with getter and setter for category
     public Category getCategory() {
         return category;
     }
